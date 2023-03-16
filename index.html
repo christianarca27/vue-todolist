@@ -13,6 +13,9 @@
         <ul>
             <li v-for="(todo, index) in todoList" :class="todo.done ? 'done' : ''">{{ todo.text }} <span @click="removeTodo(index)">X</span></li>
         </ul>
+
+        <input v-model="input" type="text" placeholder="Inserisci nuovo todo..">
+        <button @click="addTodo()">Aggiungi</button>
     </div>
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>

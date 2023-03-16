@@ -28,13 +28,24 @@ const { createApp } = Vue
                 text: "fagioli",
                 done: false
             }
-        ]
+        ],
+
+        input: "",
       }
     },
 
     methods: {
         removeTodo(index) {
             this.todoList.splice(index, 1);
+        },
+        
+        addTodo() {
+            newItem = {
+                text: this.input,
+                done: false
+            }
+
+            this.todoList.push(newItem);
         }
     },
 
