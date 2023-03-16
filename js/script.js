@@ -44,8 +44,18 @@ const { createApp } = Vue
                 text: this.input,
                 done: false
             }
+            this.input = "";
 
             this.todoList.push(newItem);
+        },
+
+        toggleDone(index) {
+            if(this.todoList[index].done) {
+                this.todoList[index].done = false;
+            }
+            else {
+                this.todoList[index].done = true;
+            }
         }
     },
 

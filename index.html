@@ -11,10 +11,10 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="(todo, index) in todoList" :class="todo.done ? 'done' : ''">{{ todo.text }} <span @click="removeTodo(index)">X</span></li>
+            <li v-for="(todo, index) in todoList" :class="todo.done ? 'done' : ''"><span @click="toggleDone(index)">{{ todo.text }}</span> <span @click="removeTodo(index)">X</span></li>
         </ul>
 
-        <input v-model="input" type="text" placeholder="Inserisci nuovo todo..">
+        <input v-on:keyup.enter="addTodo()" v-model="input" type="text" placeholder="Inserisci nuovo todo..">
         <button @click="addTodo()">Aggiungi</button>
     </div>
 
