@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="todo in todoList" :class="todo.done ? 'done' : ''">{{ todo.text }}</li>
+            <li v-for="(todo, index) in todoList" :class="todo.done ? 'done' : ''">{{ todo.text }} <span @click="removeTodo(index)">X</span></li>
         </ul>
     </div>
 

@@ -16,12 +16,26 @@ const { createApp } = Vue
                 text: "pane",
                 done: false
             },
+            {
+                text: "pasta",
+                done: false
+            },
+            {
+                text: "tonno",
+                done: true
+            },
+            {
+                text: "fagioli",
+                done: false
+            }
         ]
       }
     },
 
     methods: {
-        
+        removeTodo(index) {
+            this.todoList.splice(index, 1);
+        }
     },
 
     mounted() {
