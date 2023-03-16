@@ -10,7 +10,9 @@
 </head>
 <body>
     <div id="app">
-        
+        <ul>
+            <li v-for="todo in todoList" :class="todo.done ? 'done' : ''">{{ todo.text }}</li>
+        </ul>
     </div>
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
